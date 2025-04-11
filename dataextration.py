@@ -12,7 +12,7 @@ def findfiletype(filepath):
 def extractdata(filepath):
     filetype = findfiletype(filepath)  # Determine the file type based on filepath
     if filetype == "xlsx":
-        df = pd.read_excel(filepath)  # Read the Excel file
+        df = pd.read_excel(filepath)  # to Read the Excel file read_excel() is a buildin function in pandas
         result = df.to_dict(orient="records")  # Convert the dataframe to a list of records
         print(result)
         return result
